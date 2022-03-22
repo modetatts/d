@@ -1,0 +1,15 @@
+/node_modules
+/public/hot
+/public/storage
+/public/sitemap.xml
+/storage/*.key
+/vendor
+.env*
+!.env.example
+.phplint-cache
+.phpunit.result.cache
+.php-cs-fixer.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log

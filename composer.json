@@ -1,0 +1,73 @@
+{
+    "name": "vaibhavpandeyvpz/starter-laravel",
+    "type": "project",
+    "description": "Quick, Laravel LTS CRUD boilerplate using Livewire with RBAC.",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "fideloper/proxy": "^4.0",
+        "intervention/image": "^2.5",
+        "jamesmills/laravel-timezone": "^1.9",
+        "laracasts/flash": "^3.2",
+        "laravel/framework": "^6.18.35",
+        "laravel/socialite": "^5.0",
+        "laravel/tinker": "^2.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "livewire/livewire": "^1.0",
+        "quarks/laravel-auditors": "^1.1",
+        "spatie/laravel-activitylog": "^3.16",
+        "spatie/laravel-permission": "^3.10",
+        "spatie/laravel-sitemap": "^5.8"
+    },
+    "require-dev": {
+        "facade/ignition": "^1.4",
+        "friendsofphp/php-cs-fixer": "^3.3",
+        "fzaninotto/faker": "^1.9.1",
+        "laravel/ui": "1.0",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "overtrue/phplint": "^3.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.2.0"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    }
+}
